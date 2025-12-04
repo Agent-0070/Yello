@@ -1,0 +1,299 @@
+@import "tailwindcss";
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 26% 14%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
+    --surface: 210 20% 98%;
+    --surface-elevated: 0 0% 100%;
+    
+    /* Interactive Colors */
+    --primary: 220 26% 14%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 30% 20%;
+    
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 220 26% 14%;
+    --secondary-hover: 210 15% 94%;
+    
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 76% 30%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-hover: 0 84% 54%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+    
+    /* Neutral Colors */
+    --muted: 210 20% 98%;
+    --muted-foreground: 220 13% 69%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 26% 14%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 26% 14%), hsl(220 30% 20%));
+    --gradient-surface: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 40%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 26% 14% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 26% 14% / 0.1), 0 2px 4px -1px hsl(220 26% 14% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 26% 14% / 0.1), 0 4px 6px -2px hsl(220 26% 14% / 0.05);
+    --shadow-glow: 0 0 20px hsl(142 76% 36% / 0.3);
+    
+    /* Spacing & Sizing */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Font variables (Google Fonts loaded in index.html) */
+    --font-poppins: 'Poppins', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-salsa: 'Salsa', cursive;
+  }
+
+  .dark {
+    /* Base Colors */
+    /* Dark page background only (set to #0a0a0a). Keep component surfaces unchanged. */
+    /* Set page background to match hex #121212 (~ hsl(0 0% 7.06%)) */
+    --background: 0 0% 4.06%;
+    --foreground: 0 0% 95%;
+    
+    /* Surface Colors */
+    --card: 220 20% 8%;
+    --card-foreground: 0 0% 95%;
+    --surface: 220 20% 10%;
+    --surface-elevated: 220 20% 12%;
+    
+    /* Interactive Colors */
+    --primary: 0 0% 95%;
+    --primary-foreground: 220 26% 6%;
+    --primary-hover: 0 0% 85%;
+    
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-hover: 220 20% 16%;
+    
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 76% 40%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-hover: 0 84% 54%;
+    
+    /* Status Colors */
+    --success: 142 76% 40%;
+    --warning: 38 92% 55%;
+    --error: 0 84% 60%;
+    
+    /* Neutral Colors */
+    --muted: 220 20% 12%;
+    --muted-foreground: 220 10% 65%;
+    --border: 220 20% 16%;
+    --input: 220 20% 16%;
+    --ring: 0 0% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 95%), hsl(0 0% 85%));
+    --gradient-surface: linear-gradient(145deg, hsl(220 20% 8%), hsl(220 20% 12%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 40%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 25px hsl(142 76% 36% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    /* Use the CSS variable directly for border color instead of a Tailwind utility
+       This avoids depending on a `border` color entry in tailwind.config.js
+       and prevents the unknown utility error from `@tailwindcss/vite`. */
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    /* Set background and text color directly from CSS variables instead of
+       using Tailwind utilities so this global stylesheet doesn't depend on
+       the Tailwind @apply resolution (which can fail in some setups). */
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-poppins);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Custom animations for DoHub */
+  .task-enter {
+    animation: slideInUp 0.3s ease-out;
+  }
+  
+  .task-exit {
+    animation: slideOutDown 0.3s ease-in;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .bounce-in {
+    animation: bounceIn 0.6s ease-out;
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    transition: all 0.2s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Glass effect */
+  .glass {
+    background: hsl(var(--surface) / 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* Font helper classes (optional) */
+  .font-poppins {
+    font-family: var(--font-poppins) !important;
+  }
+
+  .font-salsa {
+    font-family: var(--font-salsa) !important;
+  }
+}
+
+/* Ensure inputs keep a consistent border color even when filled or autofilled */
+@layer components {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    /* Use the --border token so inputs match other borders in the app */
+    border-color: hsl(var(--border)) !important;
+    /* Ensure typed text color follows the theme foreground token */
+    color: hsl(var(--foreground)) !important;
+  }
+
+  /* Keep the border color when the placeholder is hidden (i.e. user has typed) */
+  input:not(:placeholder-shown),
+  textarea:not(:placeholder-shown) {
+    border-color: hsl(var(--border)) !important;
+  }
+
+  /* Prevent browser autofill from making the border/background white/yellow */
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover {
+    -webkit-text-fill-color: inherit !important;
+    /* For autofill, explicitly set the fill color to the theme foreground */
+    -webkit-text-fill-color: hsl(var(--foreground)) !important;
+    box-shadow: 0 0 0px 1000px hsl(var(--surface)) inset !important;
+    border-color: hsl(var(--border)) !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+}
+
+/* Keep border visible on focus */
+@layer components {
+  input:focus,
+  textarea:focus {
+    border-color: hsl(var(--border)) !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
