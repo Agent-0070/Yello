@@ -25,21 +25,8 @@ app.use((req, res, next) => {
   next();
 });
 
-// Middleware
-const frontendEnv = process.env.FRONTEND_URL || '';
-const frontendOrigins = frontendEnv
-  ? frontendEnv.split(',').map(s => s.trim()).filter(Boolean)
-  : [];
-
-app.use(cors({
-  origin: [
-    'https://noted-ng.web.app',
-    'http://localhost:5173',
-    'http://localhost:5174',
-    'http://localhost:8081',
-  ].filter(Boolean),
-  credentials: true,
-}));
+// Middleware: use the centralized CORS config from src/config/environment.js
+app.use(cors(config.cors));
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
